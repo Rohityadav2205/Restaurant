@@ -28,8 +28,8 @@
     <form id="form1" runat="server">
     <center>
     <div>
-    <div class="open "><h1><ul>  Restaurant  </ul></h1> </div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+    <div class="open "><h1><ul>  Restaurant  Category Information </ul></h1> </div>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-hover table-responsive-md" 
             BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" 
             CellPadding="3" DataKeyNames="categoryno" DataSourceID="SqlDataSource1" 
             GridLines="Vertical">
@@ -39,9 +39,16 @@
                 <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
                 <asp:BoundField DataField="comment" HeaderText="comment" 
                     SortExpression="comment" />
-                     <asp:TemplateField HeaderText="Show items">
-                    <ItemTemplate><a target="cr" href='itemmenu.aspx?categoryno=<%# Eval("categoryno") %>'>Show Items</a></ItemTemplate>
+                     <asp:TemplateField HeaderText="view items">
+                    <ItemTemplate><a target="cr" class="btn btn-primary" href='itemmenu.aspx?categoryno=<%# Eval("categoryno") %>'> Items list</a></ItemTemplate>
                     </asp:TemplateField>
+                    <asp:TemplateField HeaderText="categoryname">
+                    <ItemTemplate>
+                    <%# Utilities.getCategoryNameByCategoryNo(Eval("categoryno")) %>
+                    </ItemTemplate>
+                    
+                    </asp:TemplateField>
+
             </Columns>
             <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
             <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
@@ -55,7 +62,7 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:restaurantConnectionString %>" 
-            DeleteCommand="delete  from categorymenu  where categoryno=@categoryno"
+            DeleteCommand="delete  from categorymenu  where categoryname=@categoryname"
             UpdateCommand="update categorymenu set name=@name,comment=@comment where categoryno=@categoryno"
             SelectCommand="SELECT [categoryno], [name], [comment] FROM [categorymenu] ORDER BY [categoryno]">
         </asp:SqlDataSource>

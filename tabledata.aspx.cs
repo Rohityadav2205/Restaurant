@@ -16,7 +16,8 @@ public partial class tabledata : System.Web.UI.Page
         try
         {
             DataSet1TableAdapters.tabledetailTableAdapter da = new DataSet1TableAdapters.tabledetailTableAdapter();
-            da.Insert1(Convert.ToInt32(txttableno.Text), Convert.ToInt32(txtseats.Text), txtcomment.Text);
+            da.Insert1( Convert.ToInt32(txtseats.Text), txtcomment.Text);
+            GridView1.DataBind();
             lbl.Text = "your table data= " + da.maxtable();
         }
         catch(Exception ex)
