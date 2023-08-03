@@ -8,27 +8,13 @@
 
     <title></title>
 </head>
-<style>
-*
-{
-    background-color:Gray;
-    }
-    .open
-    {
-        color:Green;
-        background-color:black
-        }
-        .run:hover
-        {
-            color:Maroon;
-            background-color:Green
-            }
-</style>
+
+
 <body>
     <form id="form1" runat="server">
     <center>
     <div>
-    <div class="open "><h1><ul>  Restaurant  Category Information </ul></h1> </div>
+    <div class="" ><h1>  Restaurant  Category Information </h1> </div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-hover table-responsive-md" 
             BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" 
             CellPadding="3" DataKeyNames="categoryno" DataSourceID="SqlDataSource1" 
@@ -62,7 +48,7 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:restaurantConnectionString %>" 
-            DeleteCommand="delete  from categorymenu  where categoryname=@categoryname"
+            DeleteCommand="delete  from categorymenu  where categoryno=@categoryno"
             UpdateCommand="update categorymenu set name=@name,comment=@comment where categoryno=@categoryno"
             SelectCommand="SELECT [categoryno], [name], [comment] FROM [categorymenu] ORDER BY [categoryno]">
         </asp:SqlDataSource>

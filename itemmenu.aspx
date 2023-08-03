@@ -4,14 +4,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
+    <center>
+    
+    <div class="" ><h1>  items menu data </h1> </div>
         <asp:Label ID="lbl" runat="server" Text=""></asp:Label>
         <br />
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-hover table-responsive-md" 
             BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" 
             CellPadding="4" DataKeyNames="itemno" DataSourceID="SqlDataSource1" 
             GridLines="Horizontal">
@@ -27,8 +31,11 @@
                 <asp:BoundField DataField="packing" HeaderText="packing" 
                     SortExpression="packing" />
                     <asp:TemplateField HeaderText="Show item">
-                    <ItemTemplate><a target="cr" href='categoryinsert.aspx?itemno=<%# Eval("itemno") %>'>category insert</a></ItemTemplate>
+                    <ItemTemplate><a target="cr"  class="btn btn-primary" href='categoryinsert.aspx?itemno=<%# Eval("itemno") %>'>category insert</a></ItemTemplate>
                     
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="edit item">
+                    <ItemTemplate><a target="cr" class="btn btn-danger" href="editsitemmenu.aspx?itemno=<%#Eval ("itemno") %>">edit item</a></ItemTemplate>
                     </asp:TemplateField>
             </Columns>
             <FooterStyle BackColor="White" ForeColor="#333333" />
@@ -68,8 +75,9 @@
         <asp:Button ID="Button1" runat="server" Text="submit" onclick="Button1_Click" />
         <asp:Button ID="Button2" runat="server" Text="clear" onclick="Button2_Click" />
 
-    
+    </center>
     </div>
     </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
