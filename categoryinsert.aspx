@@ -26,13 +26,16 @@
                 <asp:BoundField DataField="comment" HeaderText="comment" 
                     SortExpression="comment" />
                      <asp:TemplateField HeaderText="view items">
-                    <ItemTemplate><a target="cr" class="btn btn-primary" href='itemmenu.aspx?categoryno=<%# Eval("categoryno") %>'> Items list</a></ItemTemplate>
+                    <ItemTemplate><a target="cr" class="btn btn-primary" href='itemlist2.aspx?categoryno=<%# Eval("categoryno") %>'> Items list</a></ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="categoryname">
                     <ItemTemplate>
                     <%# Utilities.getCategoryNameByCategoryNo(Eval("categoryno")) %>
                     </ItemTemplate>
                     
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="edit items">
+                    <ItemTemplate><a target="cr" class="btn btn-primary" href='editsitemmenu.aspx?categoryno=<%# Eval("categoryno") %>'> edit items</a></ItemTemplate>
                     </asp:TemplateField>
 
             </Columns>

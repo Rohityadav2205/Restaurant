@@ -58,9 +58,31 @@
         <br />
         <asp:Label ID="Label2" runat="server" Text="categoryno"></asp:Label>  
         <asp:DropDownList ID="DropDownList1" runat="server" 
-            DataSourceID="SqlDataSource1" DataTextField="categoryno" 
-            DataValueField="categoryno">
+            DataSourceID="SqlDataSource3" DataTextField="name" DataValueField="name">
         </asp:DropDownList>
+      
+       
+      
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:restaurantConnectionString %>" 
+            SelectCommand="SELECT [categoryno], [name] FROM [categorymenu] WHERE ([categoryno] = @categoryno)">
+            <SelectParameters>
+                <asp:QueryStringParameter Name="categoryno" QueryStringField="categoryno" 
+                    Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:restaurantConnectionString %>" 
+            SelectCommand="SELECT [categoryno], [name], [comment] FROM [categorymenu] WHERE (([categoryno] = @categoryno) AND ([categoryno] = @categoryno2)) ORDER BY [categoryno], [name], [comment]">
+            <SelectParameters>
+                <asp:QueryStringParameter Name="categoryno" QueryStringField="categoryno" 
+                    Type="Int32" />
+                <asp:QueryStringParameter Name="categoryno2" QueryStringField="categoryno" 
+                    Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+      
+       
       
         <br />
         <asp:Label ID="Label3" runat="server" Text="itemname"></asp:Label>  

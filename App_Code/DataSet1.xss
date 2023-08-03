@@ -7,11 +7,11 @@
 <DiagramLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ex:showrelationlabel="False" ViewPortX="35" ViewPortY="-47" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:restaurant info" ZOrder="8" X="99" Y="129" Height="191" Width="231" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:categorymenu" ZOrder="6" X="368" Y="155" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
-    <Shape ID="DesignTable:itemmenu" ZOrder="2" X="375" Y="298" Height="76" Width="204" AdapterExpanded="false" DataTableExpanded="true" OldAdapterHeight="38" OldDataTableHeight="24" SplitterPosition="46" />
-    <Shape ID="DesignTable:categorymenu2" ZOrder="1" X="485" Y="-22" Height="153" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="83" />
-    <Shape ID="DesignTable:tabledetail" ZOrder="5" X="654" Y="195" Height="172" Width="206" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
-    <Shape ID="DesignTable:bookinginfo" ZOrder="4" X="168" Y="5" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
+    <Shape ID="DesignTable:itemmenu" ZOrder="5" X="375" Y="298" Height="76" Width="204" AdapterExpanded="false" DataTableExpanded="true" OldAdapterHeight="38" OldDataTableHeight="24" SplitterPosition="46" />
+    <Shape ID="DesignTable:categorymenu2" ZOrder="4" X="485" Y="-22" Height="153" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="83" />
+    <Shape ID="DesignTable:bookinginfo" ZOrder="6" X="168" Y="5" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
+    <Shape ID="DesignTable:categorymenu" ZOrder="3" X="368" Y="155" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
+    <Shape ID="DesignTable:tabledetail" ZOrder="1" X="654" Y="195" Height="172" Width="206" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK_itemmenu_categorymenu" ZOrder="7" LineWidth="11">
@@ -26,7 +26,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:tabledetail_bookinginfo" ZOrder="3" LineWidth="11">
+    <Connector ID="DesignRelation:tabledetail_bookinginfo" ZOrder="2" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>654</X>

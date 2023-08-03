@@ -154,7 +154,7 @@ FROM            categorymenu</CommandText>
               <Mapping SourceColumn="packing" DataSetColumn="packing" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="restaurantConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="maxitem" Modifier="Public" Name="maxitem" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="maxitem">
+              <DbSource ConnectionRef="restaurantConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="maxitem" Modifier="Public" Name="maxitem" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="maxitem">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT MAX(itemno) FROM itemmenu</CommandText>
@@ -351,7 +351,7 @@ FROM            tabledetail</CommandText>
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="restaurant_x0020_info" msprop:Generator_TableClassName="restaurant_infoDataTable" msprop:Generator_TableVarName="tablerestaurant_info" msprop:Generator_TablePropName="restaurant_info" msprop:Generator_RowDeletingName="restaurant_infoRowDeleting" msprop:Generator_RowChangingName="restaurant_infoRowChanging" msprop:Generator_RowEvHandlerName="restaurant_infoRowChangeEventHandler" msprop:Generator_RowDeletedName="restaurant_infoRowDeleted" msprop:Generator_UserTableName="restaurant info" msprop:Generator_RowChangedName="restaurant_infoRowChanged" msprop:Generator_RowEvArgName="restaurant_infoRowChangeEvent" msprop:Generator_RowClassName="restaurant_infoRow">
+        <xs:element name="restaurant_x0020_info" msprop:Generator_TableClassName="restaurant_infoDataTable" msprop:Generator_TableVarName="tablerestaurant_info" msprop:Generator_RowChangedName="restaurant_infoRowChanged" msprop:Generator_TablePropName="restaurant_info" msprop:Generator_RowDeletingName="restaurant_infoRowDeleting" msprop:Generator_RowChangingName="restaurant_infoRowChanging" msprop:Generator_RowEvHandlerName="restaurant_infoRowChangeEventHandler" msprop:Generator_RowDeletedName="restaurant_infoRowDeleted" msprop:Generator_RowClassName="restaurant_infoRow" msprop:Generator_UserTableName="restaurant info" msprop:Generator_RowEvArgName="restaurant_infoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
@@ -386,28 +386,7 @@ FROM            tabledetail</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="categorymenu" msprop:Generator_TableClassName="categorymenuDataTable" msprop:Generator_TableVarName="tablecategorymenu" msprop:Generator_TablePropName="categorymenu" msprop:Generator_RowDeletingName="categorymenuRowDeleting" msprop:Generator_RowChangingName="categorymenuRowChanging" msprop:Generator_RowEvHandlerName="categorymenuRowChangeEventHandler" msprop:Generator_RowDeletedName="categorymenuRowDeleted" msprop:Generator_UserTableName="categorymenu" msprop:Generator_RowChangedName="categorymenuRowChanged" msprop:Generator_RowEvArgName="categorymenuRowChangeEvent" msprop:Generator_RowClassName="categorymenuRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="categoryno" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncategoryno" msprop:Generator_ColumnPropNameInRow="categoryno" msprop:Generator_ColumnPropNameInTable="categorynoColumn" msprop:Generator_UserColumnName="categoryno" type="xs:int" />
-              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="comment" msprop:Generator_ColumnVarNameInTable="columncomment" msprop:Generator_ColumnPropNameInRow="comment" msprop:Generator_ColumnPropNameInTable="commentColumn" msprop:Generator_UserColumnName="comment">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="itemmenu" msprop:Generator_TableClassName="itemmenuDataTable" msprop:Generator_TableVarName="tableitemmenu" msprop:Generator_RowChangedName="itemmenuRowChanged" msprop:Generator_TablePropName="itemmenu" msprop:Generator_RowDeletingName="itemmenuRowDeleting" msprop:Generator_RowChangingName="itemmenuRowChanging" msprop:Generator_RowEvHandlerName="itemmenuRowChangeEventHandler" msprop:Generator_RowDeletedName="itemmenuRowDeleted" msprop:Generator_RowClassName="itemmenuRow" msprop:Generator_UserTableName="itemmenu" msprop:Generator_RowEvArgName="itemmenuRowChangeEvent">
+        <xs:element name="itemmenu" msprop:Generator_TableClassName="itemmenuDataTable" msprop:Generator_TableVarName="tableitemmenu" msprop:Generator_TablePropName="itemmenu" msprop:Generator_RowDeletingName="itemmenuRowDeleting" msprop:Generator_RowChangingName="itemmenuRowChanging" msprop:Generator_RowEvHandlerName="itemmenuRowChangeEventHandler" msprop:Generator_RowDeletedName="itemmenuRowDeleted" msprop:Generator_UserTableName="itemmenu" msprop:Generator_RowChangedName="itemmenuRowChanged" msprop:Generator_RowEvArgName="itemmenuRowChangeEvent" msprop:Generator_RowClassName="itemmenuRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="itemno" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnitemno" msprop:Generator_ColumnPropNameInRow="itemno" msprop:Generator_ColumnPropNameInTable="itemnoColumn" msprop:Generator_UserColumnName="itemno" type="xs:int" />
@@ -430,7 +409,7 @@ FROM            tabledetail</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="categorymenu2" msprop:Generator_TableClassName="categorymenu2DataTable" msprop:Generator_TableVarName="tablecategorymenu2" msprop:Generator_TablePropName="categorymenu2" msprop:Generator_RowDeletingName="categorymenu2RowDeleting" msprop:Generator_RowChangingName="categorymenu2RowChanging" msprop:Generator_RowEvHandlerName="categorymenu2RowChangeEventHandler" msprop:Generator_RowDeletedName="categorymenu2RowDeleted" msprop:Generator_UserTableName="categorymenu2" msprop:Generator_RowChangedName="categorymenu2RowChanged" msprop:Generator_RowEvArgName="categorymenu2RowChangeEvent" msprop:Generator_RowClassName="categorymenu2Row">
+        <xs:element name="categorymenu2" msprop:Generator_TableClassName="categorymenu2DataTable" msprop:Generator_TableVarName="tablecategorymenu2" msprop:Generator_RowChangedName="categorymenu2RowChanged" msprop:Generator_TablePropName="categorymenu2" msprop:Generator_RowDeletingName="categorymenu2RowDeleting" msprop:Generator_RowChangingName="categorymenu2RowChanging" msprop:Generator_RowEvHandlerName="categorymenu2RowChangeEventHandler" msprop:Generator_RowDeletedName="categorymenu2RowDeleted" msprop:Generator_RowClassName="categorymenu2Row" msprop:Generator_UserTableName="categorymenu2" msprop:Generator_RowEvArgName="categorymenu2RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="categoryno" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncategoryno" msprop:Generator_ColumnPropNameInRow="categoryno" msprop:Generator_ColumnPropNameInTable="categorynoColumn" msprop:Generator_UserColumnName="categoryno" type="xs:int" />
@@ -451,7 +430,38 @@ FROM            tabledetail</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tabledetail" msprop:Generator_TableClassName="tabledetailDataTable" msprop:Generator_TableVarName="tabletabledetail" msprop:Generator_TablePropName="tabledetail" msprop:Generator_RowDeletingName="tabledetailRowDeleting" msprop:Generator_RowChangingName="tabledetailRowChanging" msprop:Generator_RowEvHandlerName="tabledetailRowChangeEventHandler" msprop:Generator_RowDeletedName="tabledetailRowDeleted" msprop:Generator_UserTableName="tabledetail" msprop:Generator_RowChangedName="tabledetailRowChanged" msprop:Generator_RowEvArgName="tabledetailRowChangeEvent" msprop:Generator_RowClassName="tabledetailRow">
+        <xs:element name="bookinginfo" msprop:Generator_TableClassName="bookinginfoDataTable" msprop:Generator_TableVarName="tablebookinginfo" msprop:Generator_TablePropName="bookinginfo" msprop:Generator_RowDeletingName="bookinginfoRowDeleting" msprop:Generator_RowChangingName="bookinginfoRowChanging" msprop:Generator_RowEvHandlerName="bookinginfoRowChangeEventHandler" msprop:Generator_RowDeletedName="bookinginfoRowDeleted" msprop:Generator_UserTableName="bookinginfo" msprop:Generator_RowChangedName="bookinginfoRowChanged" msprop:Generator_RowEvArgName="bookinginfoRowChangeEvent" msprop:Generator_RowClassName="bookinginfoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="bookingno" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnbookingno" msprop:Generator_ColumnPropNameInRow="bookingno" msprop:Generator_ColumnPropNameInTable="bookingnoColumn" msprop:Generator_UserColumnName="bookingno" type="xs:int" />
+              <xs:element name="tableno" msprop:Generator_ColumnVarNameInTable="columntableno" msprop:Generator_ColumnPropNameInRow="tableno" msprop:Generator_ColumnPropNameInTable="tablenoColumn" msprop:Generator_UserColumnName="tableno" type="xs:int" />
+              <xs:element name="bookingtime" msprop:Generator_ColumnVarNameInTable="columnbookingtime" msprop:Generator_ColumnPropNameInRow="bookingtime" msprop:Generator_ColumnPropNameInTable="bookingtimeColumn" msprop:Generator_UserColumnName="bookingtime" type="xs:dateTime" />
+              <xs:element name="bookingendtime" msprop:Generator_ColumnVarNameInTable="columnbookingendtime" msprop:Generator_ColumnPropNameInRow="bookingendtime" msprop:Generator_ColumnPropNameInTable="bookingendtimeColumn" msprop:Generator_UserColumnName="bookingendtime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="categorymenu" msprop:Generator_TableClassName="categorymenuDataTable" msprop:Generator_TableVarName="tablecategorymenu" msprop:Generator_RowChangedName="categorymenuRowChanged" msprop:Generator_TablePropName="categorymenu" msprop:Generator_RowDeletingName="categorymenuRowDeleting" msprop:Generator_RowChangingName="categorymenuRowChanging" msprop:Generator_RowEvHandlerName="categorymenuRowChangeEventHandler" msprop:Generator_RowDeletedName="categorymenuRowDeleted" msprop:Generator_RowClassName="categorymenuRow" msprop:Generator_UserTableName="categorymenu" msprop:Generator_RowEvArgName="categorymenuRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="categoryno" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncategoryno" msprop:Generator_ColumnPropNameInRow="categoryno" msprop:Generator_ColumnPropNameInTable="categorynoColumn" msprop:Generator_UserColumnName="categoryno" type="xs:int" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="comment" msprop:Generator_ColumnVarNameInTable="columncomment" msprop:Generator_ColumnPropNameInRow="comment" msprop:Generator_ColumnPropNameInTable="commentColumn" msprop:Generator_UserColumnName="comment">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tabledetail" msprop:Generator_TableClassName="tabledetailDataTable" msprop:Generator_TableVarName="tabletabledetail" msprop:Generator_RowChangedName="tabledetailRowChanged" msprop:Generator_TablePropName="tabledetail" msprop:Generator_RowDeletingName="tabledetailRowDeleting" msprop:Generator_RowChangingName="tabledetailRowChanging" msprop:Generator_RowEvHandlerName="tabledetailRowChangeEventHandler" msprop:Generator_RowDeletedName="tabledetailRowDeleted" msprop:Generator_RowClassName="tabledetailRow" msprop:Generator_UserTableName="tabledetail" msprop:Generator_RowEvArgName="tabledetailRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="tableno" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columntableno" msprop:Generator_ColumnPropNameInRow="tableno" msprop:Generator_ColumnPropNameInTable="tablenoColumn" msprop:Generator_UserColumnName="tableno" type="xs:int" />
@@ -466,23 +476,9 @@ FROM            tabledetail</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="bookinginfo" msprop:Generator_TableClassName="bookinginfoDataTable" msprop:Generator_TableVarName="tablebookinginfo" msprop:Generator_RowChangedName="bookinginfoRowChanged" msprop:Generator_TablePropName="bookinginfo" msprop:Generator_RowDeletingName="bookinginfoRowDeleting" msprop:Generator_RowChangingName="bookinginfoRowChanging" msprop:Generator_RowEvHandlerName="bookinginfoRowChangeEventHandler" msprop:Generator_RowDeletedName="bookinginfoRowDeleted" msprop:Generator_RowClassName="bookinginfoRow" msprop:Generator_UserTableName="bookinginfo" msprop:Generator_RowEvArgName="bookinginfoRowChangeEvent">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="bookingno" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnbookingno" msprop:Generator_ColumnPropNameInRow="bookingno" msprop:Generator_ColumnPropNameInTable="bookingnoColumn" msprop:Generator_UserColumnName="bookingno" type="xs:int" />
-              <xs:element name="tableno" msprop:Generator_ColumnVarNameInTable="columntableno" msprop:Generator_ColumnPropNameInRow="tableno" msprop:Generator_ColumnPropNameInTable="tablenoColumn" msprop:Generator_UserColumnName="tableno" type="xs:int" />
-              <xs:element name="bookingtime" msprop:Generator_ColumnVarNameInTable="columnbookingtime" msprop:Generator_ColumnPropNameInRow="bookingtime" msprop:Generator_ColumnPropNameInTable="bookingtimeColumn" msprop:Generator_UserColumnName="bookingtime" type="xs:dateTime" />
-              <xs:element name="bookingendtime" msprop:Generator_ColumnVarNameInTable="columnbookingendtime" msprop:Generator_ColumnPropNameInRow="bookingendtime" msprop:Generator_ColumnPropNameInTable="bookingendtimeColumn" msprop:Generator_UserColumnName="bookingendtime" type="xs:dateTime" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:categorymenu" />
-      <xs:field xpath="mstns:categoryno" />
-    </xs:unique>
-    <xs:unique name="itemmenu_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:itemmenu" />
       <xs:field xpath="mstns:itemno" />
     </xs:unique>
@@ -490,19 +486,23 @@ FROM            tabledetail</CommandText>
       <xs:selector xpath=".//mstns:categorymenu2" />
       <xs:field xpath="mstns:categoryno" />
     </xs:unique>
-    <xs:unique name="tabledetail_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:tabledetail" />
-      <xs:field xpath="mstns:tableno" />
-    </xs:unique>
     <xs:unique name="bookinginfo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:bookinginfo" />
       <xs:field xpath="mstns:bookingno" />
     </xs:unique>
+    <xs:unique name="categorymenu_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:categorymenu" />
+      <xs:field xpath="mstns:categoryno" />
+    </xs:unique>
+    <xs:unique name="tabledetail_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tabledetail" />
+      <xs:field xpath="mstns:tableno" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_itemmenu_categorymenu" msdata:parent="categorymenu2" msdata:child="itemmenu" msdata:parentkey="categoryno" msdata:childkey="categoryno" msprop:Generator_UserChildTable="itemmenu" msprop:Generator_ChildPropName="GetitemmenuRows" msprop:Generator_UserRelationName="FK_itemmenu_categorymenu" msprop:Generator_RelationVarName="relationFK_itemmenu_categorymenu" msprop:Generator_UserParentTable="categorymenu2" msprop:Generator_ParentPropName="categorymenu2Row" />
-      <msdata:Relationship name="tabledetail_bookinginfo" msdata:parent="tabledetail" msdata:child="bookinginfo" msdata:parentkey="tableno" msdata:childkey="tableno" msprop:Generator_UserChildTable="bookinginfo" msprop:Generator_ChildPropName="GetbookinginfoRows" msprop:Generator_UserRelationName="tabledetail_bookinginfo" msprop:Generator_RelationVarName="relationtabledetail_bookinginfo" msprop:Generator_UserParentTable="tabledetail" msprop:Generator_ParentPropName="tabledetailRow" />
+      <msdata:Relationship name="FK_itemmenu_categorymenu" msdata:parent="categorymenu2" msdata:child="itemmenu" msdata:parentkey="categoryno" msdata:childkey="categoryno" msprop:Generator_UserChildTable="itemmenu" msprop:Generator_ChildPropName="GetitemmenuRows" msprop:Generator_UserRelationName="FK_itemmenu_categorymenu" msprop:Generator_ParentPropName="categorymenu2Row" msprop:Generator_RelationVarName="relationFK_itemmenu_categorymenu" msprop:Generator_UserParentTable="categorymenu2" />
+      <msdata:Relationship name="tabledetail_bookinginfo" msdata:parent="tabledetail" msdata:child="bookinginfo" msdata:parentkey="tableno" msdata:childkey="tableno" msprop:Generator_UserChildTable="bookinginfo" msprop:Generator_ChildPropName="GetbookinginfoRows" msprop:Generator_UserRelationName="tabledetail_bookinginfo" msprop:Generator_ParentPropName="tabledetailRow" msprop:Generator_RelationVarName="relationtabledetail_bookinginfo" msprop:Generator_UserParentTable="tabledetail" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

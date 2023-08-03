@@ -12,6 +12,7 @@
     <div>
     
         <asp:Label ID="lblName" runat="server" Text=""></asp:Label>
+        <br />
         <asp:Label ID="lbl" runat="server" Text=""></asp:Label>
         <asp:Label ID="Label2" runat="server" Text="itemname"></asp:Label>  
         <asp:TextBox ID="txtitemname" runat="server"></asp:TextBox>
@@ -32,11 +33,10 @@
     
     </div>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-        CellPadding="4" DataKeyNames="itemno" DataSourceID="SqlDataSource1" 
+        CellPadding="4" DataKeyNames="itemno" DataSourceID="SqlDataSource2" 
         ForeColor="#333333" GridLines="None">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
-            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             <asp:BoundField DataField="itemno" HeaderText="itemno" InsertVisible="False" 
                 ReadOnly="True" SortExpression="itemno" />
             <asp:BoundField DataField="categoryno" HeaderText="categoryno" 
@@ -58,6 +58,14 @@
         <SortedDescendingCellStyle BackColor="#D4DFE1" />
         <SortedDescendingHeaderStyle BackColor="#15524A" />
     </asp:GridView>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:restaurantConnectionString %>" 
+        SelectCommand="SELECT * FROM [itemmenu] WHERE ([categoryno] = @categoryno) ORDER BY [itemname], [price], [packing]">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="categoryno" QueryStringField="categoryno" 
+                Type="Int32" />
+        </SelectParameters>
+    </asp:SqlDataSource>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:restaurantConnectionString %>" 
           DeleteCommand="delete from itemmenu where itemno=@itemno"
